@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.exchange{
+    background-color: #D6D6D6;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.exchange__inner{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exchange__board{
+    max-width: 630px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 16px 25px;
+    position: relative;
+}
+
+.exchange__heading{
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 54px;
+    margin-bottom: 15px;
+}
+.exchange__coin--img{
+    position: absolute;
+    background-image: url('../img/bitcoin.png');
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 16px;
+    left: 25px;
+}
+.exchange__update{
+    position: absolute;
+    font-size: 14px;
+    line-height: 20px;
+    right: 25px;
+    top: 10px;
+}
+.exchange__price--row{
+    display: flex;
+    align-items: center;
+    padding: 6px 25px;
+    border-radius: 6px;
+    background-color: #EBEBEB;
+    margin-bottom: 10px;
+}
+.exchange__flag{
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.exchange__currency{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.exchange__description{
+    font-size: 12px;
+    line-height: 14px;
+    color: #878787;
+}
+.exchange__rate{
+    margin-left: auto;
+    font-size: 18px;
+    line-height: 24px;
+    color: #272727;
+    font-weight: 500;
+}
+
+.exchsnge__disclaimer{
+    font-size: 12px;
+    line-height: 14px;
+    color: #858585;
+    text-align: center;
+}
+
+@media (max-width: 460px){
+    .exchange__board{
+        padding-top: 30px;
+    }
+    .exchange__coin--img{
+        top: 30px;
+    }
+    .exchange__update{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 416px){
+    .exchange__description{
+        display: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .exchange__flag{
+        margin-right: 10px;
+    }
+    .exchange__price--row{
+        padding: 6px 10px;
+    }
+}

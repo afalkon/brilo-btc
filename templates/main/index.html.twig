@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="exchange">
+    <div class="container">
+        <div class="exchange__inner">
+            <div class="exchange__board">
+                <div class="exchange__coin--img"></div>
+                <h1 class="exchange__heading">{{ data['chart_name'] }}</h1>
+                <div id="exchange__update" class="exchange__update">{{ data['update_time'] }}</div>
+                {% for currency in data['currencies'] %}
+                    <div class="exchange__price--row">
+                        <div class="exchange__flag">{{ currency['symbol']|raw }}</div>
+                        <div class="exchange__currency--info">
+                            <div class="exchange__currency">{{ currency['code'] }}</div>
+                            <div class="exchange__description">{{ currency['description'] }}</div>
+                        </div>
+                        <div id="{{ currency['code'] }}" class="exchange__rate">{{ currency['rate_float'] }}</div>
+                    </div>
+                {% endfor %}
+                <p class="exchsnge__disclaimer">{{ data['disclaimer'] }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
